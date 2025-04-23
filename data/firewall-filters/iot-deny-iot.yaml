@@ -1,0 +1,18 @@
+---
+apiVersion: terraform.techtales.io/v1alpha1
+kind: OpnsenseFirewallFilter
+metadata:
+  name: iot-deny-iot
+  namespace: techtales.io
+spec:
+  action: block
+  description: Block IOT to IOT
+  direction: in
+  interfaces:
+    - opt2
+  protocol: any
+  source:
+    net: 192.168.10.0/24
+  destination:
+    net: 192.168.10.0/24
+  sequence: 10

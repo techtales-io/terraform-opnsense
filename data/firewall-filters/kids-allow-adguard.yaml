@@ -1,0 +1,18 @@
+---
+apiVersion: terraform.techtales.io/v1alpha1
+kind: OpnsenseFirewallFilter
+metadata:
+  name: kids-allow-adguard
+  namespace: techtales.io
+spec:
+  action: pass
+  description: Allow KIDS to Adguard
+  direction: in
+  interfaces:
+    - opt3
+  protocol: any
+  source:
+    net: 192.168.20.0/24
+  destination:
+    net: 192.168.1.85/32 # waterfall server + velocity server/bedrock server
+  sequence: 1

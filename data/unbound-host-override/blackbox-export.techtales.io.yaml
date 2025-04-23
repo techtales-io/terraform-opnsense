@@ -1,0 +1,11 @@
+---
+apiVersion: terraform.techtales.io/v1alpha1
+kind: OpnsenseUnboundHostOverride
+metadata:
+  name: &name blackbox-exporter
+  namespace: &domain techtales.io
+spec:
+  type: A
+  hostname: *name
+  domain: *domain
+  server: 192.168.1.80

@@ -1,0 +1,18 @@
+---
+apiVersion: terraform.techtales.io/v1alpha1
+kind: OpnsenseFirewallFilter
+metadata:
+  name: qingping-allow-mqtt
+  namespace: techtales.io
+spec:
+  action: pass
+  description: Allow Qinqping IOT device to mqtt
+  direction: in
+  interfaces:
+    - opt2
+  protocol: any
+  source:
+    net: 192.168.10.40/32
+  destination:
+    net: 192.168.1.180/32
+  sequence: 1
