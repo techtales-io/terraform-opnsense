@@ -1,7 +1,8 @@
 terraform {
-  required_version = ">= 1.9.0"
+  required_version = ">= 1.9.0, <= 1.10.5"
 
   required_providers {
+    # https://registry.terraform.io/providers/hashicorp/vault/latest/docs
     vault = {
       source  = "hashicorp/vault"
       version = "4.4.0"
