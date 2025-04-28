@@ -11,7 +11,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.0, <= 1.10.5 |
 | <a name="requirement_opnsense"></a> [opnsense](#requirement\_opnsense) | 0.11.0 |
 
 ## Providers
@@ -34,7 +34,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_config"></a> [config](#input\_config) | n/a | <pre>object({<br/>    apiVersion = string<br/>    kind       = string<br/>    metadata = object({<br/>      name      = string<br/>      namespace = optional(string)<br/>    })<br/>    spec = object({<br/>      type    = string<br/>      domain  = string<br/>      hostname = string<br/><br/>      description = optional(string)<br/>      disabled = optional(bool)<br/>      mxHost = optional(string)<br/>      mxPriority = optional(number)<br/>      server = optional(string)<br/>    })<br/>  })</pre> | n/a | yes |
+| <a name="input_config"></a> [config](#input\_config) | n/a | <pre>object({<br/>    apiVersion = string<br/>    kind       = string<br/>    metadata = object({<br/>      name      = string<br/>      namespace = optional(string)<br/>    })<br/>    spec = object({<br/>      type     = string<br/>      domain   = string<br/>      hostname = string<br/><br/>      description = optional(string)<br/>      disabled    = optional(bool)<br/>      mxHost      = optional(string)<br/>      mxPriority  = optional(number)<br/>      server      = optional(string)<br/>    })<br/>  })</pre> | n/a | yes |
 
 ## Outputs
 
