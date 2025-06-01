@@ -10,6 +10,7 @@ spec:
   direction: in
   interfaces:
     - opt3
+    - lan # without this, homeassisant companion app does not work
   protocol: any
   source:
     net: 192.168.20.0/24
