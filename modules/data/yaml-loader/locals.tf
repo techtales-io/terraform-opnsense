@@ -23,7 +23,9 @@ locals {
       # Check api_version filter (empty list means match all)
       (length(var.filter.api_version) == 0 || contains(var.filter.api_version, manifest.apiVersion)) &&
       # Check kind filter (empty list means match all)
-      (length(var.filter.kind) == 0 || contains(var.filter.kind, manifest.kind))
+      (length(var.filter.kind) == 0 || contains(var.filter.kind, manifest.kind)) &&
+      # Check namespace filter (empty list means match all)
+      (length(var.filter.namespace) == 0 || contains(var.filter.namespace, try(manifest.metadata.namespace, "")))
     )
   }
 

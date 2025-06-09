@@ -30,7 +30,7 @@ No resources.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_path"></a> [path](#input\_path) | Path to the folder containing YAML files | `string` | n/a | yes |
-| <a name="input_filter"></a> [filter](#input\_filter) | Filter criteria for YAML manifests | <pre>object({<br/>    api_version = optional(list(string), [])<br/>    kind        = optional(list(string), [])<br/>  })</pre> | <pre>{<br/>  "api_version": [],<br/>  "kind": []<br/>}</pre> | no |
+| <a name="input_filter"></a> [filter](#input\_filter) | Filter criteria for YAML manifests | <pre>object({<br/>    api_version = optional(list(string), [])<br/>    kind        = optional(list(string), [])<br/>    namespace   = optional(list(string), [])<br/>  })</pre> | <pre>{<br/>  "api_version": [],<br/>  "kind": [],<br/>  "namespace": []<br/>}</pre> | no |
 
 ## Outputs
 

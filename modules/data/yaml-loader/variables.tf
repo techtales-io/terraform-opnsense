@@ -8,9 +8,11 @@ variable "filter" {
   type = object({
     api_version = optional(list(string), [])
     kind        = optional(list(string), [])
+    namespace   = optional(list(string), [])
   })
   default = {
     api_version = []
     kind        = []
+    namespace   = []
   }
 }
