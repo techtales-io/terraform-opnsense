@@ -17,22 +17,23 @@ terraform {
 
 module "yaml" {
   source = "../modules/data/yaml-loader"
+  path   = "${path.root}/../data"
 }
 
 module "vlan_interfaces" {
-  for_each = module.yaml.data.vlan_interfaces
+  for_each = module.yaml.data.by_kind["OpnsenseVlanInterface"]
   source   = "../modules/opnsense/vlan-interface"
   config   = each.value
 }
 
 module "firewall_filters" {
-  for_each = module.yaml.data.firewall_filters
+  for_each = module.yaml.data.by_kind["OpnsenseFirewallFilter"]
   source   = "../modules/opnsense/firewall-filter"
   config   = each.value
 }
 
 module "unbound_host_overrides" {
-  for_each = module.yaml.data.unbound_host_overrides
+  for_each = module.yaml.data.by_kind["OpnsenseUnboundHostOverride"]
   source   = "../modules/opnsense/unbound-host-override"
   config   = each.value
 }
