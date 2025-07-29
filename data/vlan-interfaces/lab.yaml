@@ -1,0 +1,12 @@
+---
+apiVersion: terraform.techtales.io/v1alpha1
+kind: OpnsenseVlanInterface
+metadata:
+  name: lab
+  namespace: techtales.io
+spec:
+  parent: igb2
+  vlanId: 100
+  description: Lab Devices VLAN - Isolated Network for Lab Devices
+  device: vlan03
+  priority: 7
