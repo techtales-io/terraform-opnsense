@@ -1,0 +1,18 @@
+---
+apiVersion: terraform.techtales.io/v1alpha1
+kind: OpnsenseFirewallFilter
+metadata:
+  name: lab-allow-gateway
+  namespace: techtales.io
+spec:
+  action: pass
+  description: Allow LAB to Gateway
+  direction: in
+  interfaces:
+    - opt1
+  protocol: any
+  source:
+    net: 192.168.100.0/24
+  destination:
+    net: 192.168.100.1/32
+  sequence: 1
