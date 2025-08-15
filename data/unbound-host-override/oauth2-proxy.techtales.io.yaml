@@ -2,7 +2,7 @@
 apiVersion: terraform.techtales.io/v1alpha1
 kind: OpnsenseUnboundHostOverride
 metadata:
-  name: &name zigbee2mqtt
+  name: &name oauth2-proxy
   namespace: &domain techtales.io
 spec:
   type: A
