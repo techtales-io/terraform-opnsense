@@ -5,7 +5,7 @@ terraform {
     # https://registry.terraform.io/providers/browningluke/opnsense/latest/docs
     opnsense = {
       source  = "browningluke/opnsense"
-      version = "0.11.0"
+      version = "0.12.0"
     }
   }
 }
