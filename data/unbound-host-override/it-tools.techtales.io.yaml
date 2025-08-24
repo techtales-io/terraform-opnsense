@@ -5,7 +5,7 @@ metadata:
   name: &name it-tools
   namespace: &domain techtales.io
 spec:
-  type: CNAME
+  type: A
   hostname: *name
   domain: *domain
   server: 192.168.100.200
