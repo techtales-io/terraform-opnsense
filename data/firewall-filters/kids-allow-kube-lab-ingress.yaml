@@ -2,17 +2,18 @@
 apiVersion: terraform.techtales.io/v1alpha1
 kind: OpnsenseFirewallFilter
 metadata:
-  name: kids-allow-minecraft
+  name: kids-allow-kube-lab-ingress
   namespace: techtales.io
 spec:
   action: pass
-  description: Allow KIDS to Minecraft
+  description: Allow KIDS to kube-lab ingress
   direction: in
   interfaces:
     - opt3
+    - lan # without this, homeassisant companion app does not work
   protocol: any
   source:
     net: 192.168.20.0/24
   destination:
-    net: 192.168.100.202/32 # Minecraft Velocity Proxy private
+    net: 192.168.100.200/32 # allow techtales kube-lab-ingress
   sequence: 1

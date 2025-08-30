@@ -2,10 +2,10 @@
 apiVersion: terraform.techtales.io/v1alpha1
 kind: OpnsenseUnboundHostOverride
 metadata:
-  name: &name atlantis-techtales-io-terraform-gcloud-webhook
+  name: &name flux-webhook-kube-lab
   namespace: &domain techtales.io
 spec:
   type: A
   hostname: *name
   domain: *domain
-  server: 192.168.100.210
+  server: 192.168.100.201
