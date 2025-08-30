@@ -1,0 +1,20 @@
+---
+# this rule is temporary and should be removed once the lab is fully configured
+# it allows all traffic from the lab network to any destination
+apiVersion: terraform.techtales.io/v1alpha1
+kind: OpnsenseFirewallFilter
+metadata:
+  name: lab-allow-cluster
+  namespace: techtales.io
+spec:
+  action: pass
+  description: Allow LAB to Cluster
+  direction: in
+  interfaces:
+    - opt1
+  protocol: any
+  source:
+    net: 192.168.100.0/24
+  destination:
+    net: 10.244.0.0/16
+  sequence: 1
