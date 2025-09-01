@@ -14,5 +14,5 @@ spec:
   source:
     net: 192.168.20.0/24
   destination:
-    net: 192.168.1.85/32 # waterfall server + velocity server/bedrock server
+    net: 192.168.100.203/32
   sequence: 1
